@@ -1,66 +1,44 @@
-## Foundry
+## TD Composability
 
-**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
+For this TD, you will be evaluated in two ways:
+- first by sending to the teacher your github repository because for all exercises, you must write some solidity code and not just call etherscan. Please complete `IStudentToken.sol` and `IStudentNft.sol`
+- second by calling exercice functions when needing (variable `exerciceProgression` will be check for evaluation)
 
-Foundry consists of:
 
--   **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
--   **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
--   **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
--   **Chisel**: Fast, utilitarian, and verbose solidity REPL.
+**Here are specifics details:**
 
-## Documentation
+Ex 1: Deploy an ERC20 contract (2pts)
 
-https://book.getfoundry.sh/
+Ex 2: Mint your ERC20 tokens by calling `ex2_mintStudentToken` (2pts)
 
-## Usage
+Ex 3: Mint some EvaluatorTokens by calling `ex3_mintEvaluatorToken` (2 pts)
 
-### Build
+Ex 4: From your smart contract, you must call uniswap V3 smart contracts in order to swap EvaluatorToken <> RewardToken. Then call `ex4_checkRewardTokenBalance`  (2 pts)
 
-```shell
-$ forge build
-```
+Ex 5: You must send to the Evaluator smart contract some RewardToken by calling `ex5_checkRewardTokenBalance` (2 pts)
 
-### Test
+Ex 6: Create a liquidity pool on uniswap V3 between your ERC20 tokens and some WETH. You must use Uniswap smart contracts (2 pts)
 
-```shell
-$ forge test
-```
+Ex 7: Deploy an ERC721 (2 pts)
 
-### Format
+Ex 8: Mint some ERC721's by calling `ex8_mintNFT` (2 pts)
 
-```shell
-$ forge fmt
-```
+Ex 9: Ouch... my Evaluator contract is admin of your ERC721 token. He has full rights and you must call `ex9_burnNft` (2 pts)
 
-### Gas Snapshots
+Ex 10: Verify your smart contract on Etherscan and sourcify (2 pts)
 
-```shell
-$ forge snapshot
-```
+BONUS:
+- You succeed to make all the TD in one transaction
+- You can automate some tasks (like deployment) in a makefile
 
-### Anvil
 
-```shell
-$ anvil
-```
+-----------------------------------------
+Deployed Addresses on goerli:
+- [Evaluator contract]()
+- [Reward contract]()
 
-### Deploy
 
-```shell
-$ forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>
-```
-
-### Cast
-
-```shell
-$ cast <subcommand>
-```
-
-### Help
-
-```shell
-$ forge --help
-$ anvil --help
-$ cast --help
-```
+todo
+- deployer mes contracts
+- creer REWARD/Evaluator pool
+- faire contract reponse

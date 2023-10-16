@@ -2,5 +2,11 @@
 src = "src"
 out = "out"
 libs = ["lib"]
+solc = "0.8.21"
 
+
+# chain_id = 5
+# gas_limit = 9223372036854775807
+# gas_price = 0
+# Setting this option enables decoding of er
 # See more config options https://github.com/foundry-rs/foundry/blob/master/crates/config/README.md#all-options
